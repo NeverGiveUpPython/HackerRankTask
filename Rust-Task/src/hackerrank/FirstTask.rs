@@ -12,7 +12,7 @@ pub fn simple_array_sum_main() {
     println!("Введіть кількість елементів масиву: ");
     let _ar_count: i32= stdin_iterator.next().unwrap().unwrap().trim().parse::<i32>().unwrap();
 
-    println!("Введіть всі числа масиву: ");
+    println!("Введіть {} числа масиву через пробіл: ", _ar_count);
     let ar: Vec<i32> = stdin_iterator.next().unwrap().unwrap().trim_end().split(' ').map(|s: &str| s.to_string().parse::<i32>().unwrap()).collect();
 
     let result: i32 = simple_array_sum(&ar);
