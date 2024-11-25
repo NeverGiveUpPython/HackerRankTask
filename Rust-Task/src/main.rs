@@ -17,6 +17,6 @@ fn main() {
     //hackerrank::ThirteenthTask::between_two_sets_main();
     //hackerrank::Fourteenth::breaking_best_and_worst_records_main();
     //hackerrank::FifteenthTask::subarray_division_main();
-    hackerrank::SixteenthTask::divisible_sum_pairs_main();
-    
+    //hackerrank::SixteenthTask::divisible_sum_pairs_main();
+    hackerrank::SeventeenthTask::migratory_birds_main();
 } 
