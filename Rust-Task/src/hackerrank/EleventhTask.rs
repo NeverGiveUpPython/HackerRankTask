@@ -8,7 +8,7 @@ fn count_apples_and_oranges(s: i32, t: i32, a: i32, b: i32, apples: &[i32], oran
     println!("{}", oranges_count);
 }
 pub fn apple_and_orange_main() {
-    println!("Task11. Apple and Orange");
+    println!("Task 11. Apple and Orange");
     let stdin = io::stdin();
     let mut stdin_iterator = stdin.lock().lines();
 
