@@ -12,7 +12,7 @@ fn mini_max_sum(arr: &[i32]) {
     println!("{} {}", min_sum, max_sum);
 }
 
-pub fn mini_max_sum_main() {
+pub fn mini_max_sum_main() {  
     println!("Task 7. Mini-Max Sum");
     let stdin = io::stdin();
     let mut stdin_iterator = stdin.lock().lines();
