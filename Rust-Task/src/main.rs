@@ -11,4 +11,5 @@ fn main() {
     hackerrank::SeventhTask::mini_max_sum_main();
     hackerrank::EightTask::birthday_cake_candles_main();
     hackerrank::NinthTask::time_conversion_main();
+    hackerrank::TenthTask::grading_students_main();
 }

@@ -7,3 +7,4 @@ pub mod SixthTask;
 pub mod SeventhTask;
 pub mod EightTask;
 pub mod NinthTask;
+pub mod TenthTask;
