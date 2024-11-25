@@ -27,7 +27,7 @@ fn plus_minus(arr: &[i32]) {
 }
 
 pub fn plus_minus_main() {
-    println!("plus-minus");
+    println!("Task5. Plus-Minus");
     let stdin = io::stdin();
 
     let mut stdin_iterator = stdin.lock().lines();
