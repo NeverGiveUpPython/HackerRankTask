@@ -16,3 +16,4 @@ pub mod FifteenthTask;
 pub mod SixteenthTask;
 pub mod SeventeenthTask;
 pub mod EighteenthTask;
+pub mod NineteenthTask;

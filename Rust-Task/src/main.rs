@@ -19,5 +19,6 @@ fn main() {
     //hackerrank::FifteenthTask::subarray_division_main();
     //hackerrank::SixteenthTask::divisible_sum_pairs_main();
     //hackerrank::SeventeenthTask::migratory_birds_main();
-    hackerrank::EighteenthTask::bill_division_main();
+    //hackerrank::EighteenthTask::bill_division_main();
+      hackerrank::NineteenthTask::sales_by_match_main();
 } 
