@@ -2,19 +2,16 @@ use std::io::{self, BufRead};
 
 fn diagonal_difference(arr: &[Vec<i32>]) -> i32 {
     let n = arr.len();
-    let mut primary_diagonal_sum = 0;
-    let mut secondary_diagonal_sum = 0;
 
-    for i in 0..n {
-        primary_diagonal_sum += arr[i][i];
-        secondary_diagonal_sum += arr[i][n - i - 1];
-    }
+    let (primary_diagonal_sum, secondary_diagonal_sum) = arr.iter().enumerate().fold((0, 0), |(primary, secondary), (i, row)| {
+        (primary + row[i], secondary + row[n - i - 1])
+    });
 
     (primary_diagonal_sum - secondary_diagonal_sum).abs()
 }
 
 pub fn diagonal_difference_main() {
-    println!("Task4. Diagonal-Difference");
+    println!("Task 4. Diagonal-Difference");
     let stdin = io::stdin();
     let mut stdin_iterator = stdin.lock().lines();
 

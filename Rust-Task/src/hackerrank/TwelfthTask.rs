@@ -2,17 +2,16 @@ use std::io::{self, BufRead};
 
 fn kangaroo(x1: i32, v1: i32, x2: i32, v2: i32) -> String {
     if v1 == v2 {
-        return match x1 == x2 {
-            true => "Так".to_string(),
-            false => "Ні".to_string(),
-        };
+        return if x1 == x2 { "Так".into() } else { "Ні".into() };
     }
-    
-    let (numerator, denominator) = (x2 - x1, v1 - v2);
-    
-    match (numerator % denominator == 0, numerator / denominator > 0) {
-        (true, true) => "Так".to_string(),
-        _ => "Ні".to_string(),
+
+    let distance_difference = x2 - x1;
+    let velocity_difference = v1 - v2;
+
+    if distance_difference * velocity_difference > 0 && distance_difference % velocity_difference == 0 {
+        "Так".into()
+    } else {
+        "Ні".into()
     }
 }
 

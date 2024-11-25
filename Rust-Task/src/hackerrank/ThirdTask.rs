@@ -4,7 +4,7 @@ fn a_very_big_sum(ar: &[i64]) -> i64 { // Обчислює суму чисел �
     ar.iter().sum() // .iter - для ітерації по масиву, .sum() - обчислює  суму чисел масиву
 }
 pub fn A_Very_Big_Sum_main() {
-    println!("Task3. A-Very-Big-Sum");
+    println!("Task 3. A-Very-Big-Sum");
     let stdin = io::stdin();
     let mut stdin_iterator = stdin.lock().lines();
 

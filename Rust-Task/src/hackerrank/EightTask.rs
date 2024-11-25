@@ -1,15 +1,8 @@
 use std::io::{self, BufRead};
 
 fn birthday_cake_candles(candles: &[i32]) -> i32 {
-    let highest_candle = candles.iter().max().unwrap();
-    let mut size_candles_сount = 0;
-    for &num in candles {
-        if num == *highest_candle {
-            size_candles_сount += 1;
-        }
-    }
-
-    size_candles_сount
+    let highest_candle = *candles.iter().max().unwrap();
+    candles.iter().filter(|&&candle| candle == highest_candle).count() as i32
 }
 
 pub fn birthday_cake_candles_main() {

@@ -2,20 +2,16 @@ use std::io::{self, BufRead};
 
 fn plus_minus(arr: &[i32]) {
     let n = arr.len() as f64; // Довжина масиву
-    
-    let mut positive_count = 0i8;
-    let mut negative_count = 0i8;
-    let mut zero_count = 0i8;
 
-    for &num in arr {
+    let (positive_count, negative_count, zero_count) = arr.iter().fold((0, 0, 0), |(pos, neg, zero), &num| {
         if num > 0 {
-            positive_count += 1;
+            (pos + 1, neg, zero)
         } else if num < 0 {
-            negative_count += 1;
+            (pos, neg + 1, zero)
         } else {
-            zero_count += 1;
+            (pos, neg, zero + 1)
         }
-    }
+    });
 
     let positive_proportion = positive_count as f64 / n;
     let negative_proportion = negative_count as f64 / n;
@@ -27,7 +23,7 @@ fn plus_minus(arr: &[i32]) {
 }
 
 pub fn plus_minus_main() {
-    println!("Task5. Plus-Minus");
+    println!("Task 5. Plus-Minus");
     let stdin = io::stdin();
 
     let mut stdin_iterator = stdin.lock().lines();
